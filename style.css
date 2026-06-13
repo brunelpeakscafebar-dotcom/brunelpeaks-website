@@ -742,10 +742,141 @@ a:hover {
     margin-top: var(--spacing-xl);
 }
  
-.site-footer p {
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+ 
+@media (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--spacing-xl);
+    }
+}
+ 
+.footer-section h4 {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-burnt-orange);
+    margin-bottom: var(--spacing-sm);
+}
+ 
+.footer-brand {
+    text-align: center;
+}
+ 
+@media (min-width: 768px) {
+    .footer-brand {
+        text-align: left;
+    }
+}
+ 
+.footer-logo {
+    height: 50px;
+    width: auto;
+    margin-bottom: var(--spacing-sm);
+}
+ 
+.footer-tagline {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: 0;
+}
+ 
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+ 
+@media (min-width: 768px) {
+    .footer-social {
+        justify-content: flex-start;
+    }
+}
+ 
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    transition: var(--transition);
+    opacity: 0.7;
+}
+ 
+.footer-social-link:hover {
+    opacity: 1;
+}
+ 
+.footer-social-link img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+ 
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+ 
+.footer-nav li {
+    margin-bottom: var(--spacing-xs);
+}
+ 
+.footer-nav a {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+ 
+.footer-nav a:hover {
+    color: var(--color-burnt-orange);
+}
+ 
+.footer-address {
+    text-align: center;
+}
+ 
+@media (min-width: 768px) {
+    .footer-address {
+        text-align: left;
+    }
+}
+ 
+.footer-address p {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+ 
+.footer-bottom {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-lg);
+    text-align: center;
+}
+ 
+.footer-bottom p {
     font-size: 13px;
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-xs);
+}
+ 
+.footer-bottom a {
+    color: var(--color-burnt-orange);
+    text-decoration: none;
+    transition: var(--transition);
+}
+ 
+.footer-bottom a:hover {
+    color: var(--color-burnt-orange-dark);
+    text-decoration: underline;
 }
  
 .site-footer a {
