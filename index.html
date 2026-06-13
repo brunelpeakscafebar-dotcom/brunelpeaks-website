@@ -297,6 +297,15 @@
                     <button type="submit" class="form-submit">Send enquiry</button>
                     <p class="form-notice">We'll send you a confirmation email and get back to you as soon as possible, usually within 24 hours.</p>
                 </form>
+
+                <script>
+                    document.getElementById('contactForm').addEventListener('submit', function(e) {
+                        // Allow Formspree to process the form
+                        setTimeout(function() {
+                            window.location.href = '/thank-you.html';
+                        }, 1500);
+                    });
+                </script>
             </div>
         </section>
 
