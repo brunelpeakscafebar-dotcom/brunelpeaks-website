@@ -560,6 +560,22 @@ a:hover {
 .events-section {
     background-color: var(--color-bg-secondary);
 }
+
+.events-image-card {
+    margin: var(--spacing-lg) 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.events-image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
  
 .events-grid {
     display: grid;
