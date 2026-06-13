@@ -733,6 +733,65 @@ a:hover {
 }
  
 /* ====================================
+   Awards Section (About)
+   ==================================== */
+
+.awards-section {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.awards-section h3 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-burnt-orange);
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+    justify-items: center;
+}
+
+@media (min-width: 576px) {
+    .awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl);
+    }
+}
+
+@media (min-width: 768px) {
+    .awards-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.award-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    transition: var(--transition);
+}
+
+.award-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.award-badge img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ====================================
    Footer
    ==================================== */
  
