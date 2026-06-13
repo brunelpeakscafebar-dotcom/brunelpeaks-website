@@ -141,7 +141,7 @@ a:hover {
         font-size: 28px;
     }
 }
-
+ 
 /* ====================================
    Header & Navigation
    ==================================== */
@@ -176,7 +176,7 @@ a:hover {
     text-decoration: none;
     opacity: 0.9;
 }
- 
+
 .logo-image {
     height: 55px;
     width: auto;
@@ -274,6 +274,10 @@ a:hover {
  
 .hero {
     background: var(--color-white);
+    background-image: url('images/hero_BP.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--color-text-primary);
     padding: 4rem var(--spacing-sm);
     text-align: center;
@@ -292,8 +296,7 @@ a:hover {
     right: 0;
     bottom: 0;
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(0, 0, 0, 0.02) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.03) 0%, transparent 50%);
+        linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 100%);
     pointer-events: none;
 }
  
@@ -304,7 +307,7 @@ a:hover {
 }
  
 .hero h1 {
-    color: var(--color-text-primary);
+    color: var(--color-white);
     margin-bottom: var(--spacing-xs);
 }
  
@@ -312,14 +315,14 @@ a:hover {
     font-size: 20px;
     margin-bottom: var(--spacing-md);
     opacity: 0.95;
-    color: var(--color-text-secondary);
+    color: var(--color-white);
 }
  
 .hero-subtext {
     font-size: 14px;
     margin-bottom: var(--spacing-lg);
     opacity: 0.9;
-    color: var(--color-text-secondary);
+    color: var(--color-white);
 }
  
 @media (min-width: 768px) {
