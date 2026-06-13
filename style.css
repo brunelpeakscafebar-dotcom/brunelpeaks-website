@@ -276,7 +276,7 @@ a:hover {
     background: var(--color-white);
     background-image: url('images/hero_BP.jpg');
     background-size: cover;
-    background-position: center bottom;
+    background-position: center 40%;
     background-attachment: fixed;
     color: var(--color-text-primary);
     padding: 4rem var(--spacing-sm);
