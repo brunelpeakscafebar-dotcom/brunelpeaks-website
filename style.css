@@ -808,4 +808,87 @@ a:hover {
     font-size: 13px;
     color: var(--color-text-secondary);
 }
+/* ====================================
+   Social Media Section
+   ==================================== */
  
+.social-section {
+    background-color: var(--color-bg-secondary);
+}
+ 
+.social-section h2 {
+    text-align: center;
+}
+ 
+.social-section > .container > p {
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--spacing-lg);
+}
+ 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+ 
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    min-width: 140px;
+    gap: var(--spacing-sm);
+}
+ 
+.social-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+ 
+.social-link.facebook {
+    background-color: var(--color-bg-primary);
+    border-color: #1877F2;
+    color: #1877F2;
+}
+ 
+.social-link.facebook:hover {
+    background-color: #f0f4ff;
+}
+ 
+.social-link.instagram {
+    background-color: var(--color-bg-primary);
+    border-color: #E4405F;
+    color: #E4405F;
+}
+ 
+.social-link.instagram:hover {
+    background-color: #fff0f5;
+}
+ 
+.social-icon {
+    font-size: 28px;
+    font-weight: 600;
+    display: block;
+}
+ 
+.social-icon-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+ 
+.social-label {
+    font-size: 13px;
+    font-weight: 500;
+}
+
