@@ -1,0 +1,7 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Burnt orange background -->
+  <rect width="64" height="64" fill="#C9632D"/>
+  
+  <!-- Mountain silhouette -->
+  <path d="M 8 48 L 24 24 L 32 32 L 48 16 L 56 48 Z" fill="white"/>
+</svg>
