@@ -320,6 +320,7 @@ a:hover {
  
 .hero-subtext {
     font-size: 14px;
+    font-weight: bold;
     margin-bottom: var(--spacing-lg);
     opacity: 0.9;
     color: var(--color-white);
