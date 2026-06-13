@@ -857,12 +857,12 @@ a:hover {
  
 .social-link.facebook {
     background-color: var(--color-bg-primary);
-    border-color: #1877F2;
-    color: #1877F2;
+    border-color: #E4405F;
+    color: #E4405F;
 }
  
 .social-link.facebook:hover {
-    background-color: #f0f4ff;
+    background-color: #fff0f5;
 }
  
 .social-link.instagram {
