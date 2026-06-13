@@ -147,7 +147,7 @@ a:hover {
    ==================================== */
  
 .site-header {
-    background-color: var(--color-bg-primary);
+    background-color: var(--color-burnt-orange);
     border-bottom: 1px solid var(--color-border);
     position: sticky;
     top: 0;
@@ -167,13 +167,20 @@ a:hover {
 .navbar-logo {
     font-size: 18px;
     font-weight: 500;
-    color: var(--color-text-primary);
+    color: var(--color-white);
     text-decoration: none;
 }
  
 .navbar-logo:hover {
-    color: var(--color-burnt-orange);
+    color: var(--color-white);
     text-decoration: none;
+    opacity: 0.9;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    display: block;
 }
  
 .navbar-menu {
@@ -185,9 +192,9 @@ a:hover {
     top: 60px;
     left: 0;
     right: 0;
-    background: var(--color-bg-primary);
+    background: var(--color-burnt-orange);
     padding: var(--spacing-sm);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
  
 .navbar-menu.active {
@@ -198,11 +205,11 @@ a:hover {
     display: block;
     padding: var(--spacing-xs);
     font-size: 14px;
-    color: var(--color-text-secondary);
+    color: var(--color-white);
 }
  
 .navbar-menu a:hover {
-    color: var(--color-burnt-orange);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
 }
  
@@ -219,7 +226,7 @@ a:hover {
 .menu-toggle span {
     width: 24px;
     height: 2px;
-    background: var(--color-text-primary);
+    background: var(--color-white);
     transition: var(--transition);
     transform-origin: center;
 }
@@ -266,8 +273,8 @@ a:hover {
    ==================================== */
  
 .hero {
-    background: linear-gradient(135deg, var(--color-burnt-orange) 0%, var(--color-burnt-orange-dark) 100%);
-    color: var(--color-text-light);
+    background: var(--color-white);
+    color: var(--color-text-primary);
     padding: 4rem var(--spacing-sm);
     text-align: center;
     position: relative;
@@ -285,8 +292,8 @@ a:hover {
     right: 0;
     bottom: 0;
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(0, 0, 0, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.03) 0%, transparent 50%);
     pointer-events: none;
 }
  
@@ -297,7 +304,7 @@ a:hover {
 }
  
 .hero h1 {
-    color: var(--color-text-light);
+    color: var(--color-text-primary);
     margin-bottom: var(--spacing-xs);
 }
  
@@ -305,12 +312,14 @@ a:hover {
     font-size: 20px;
     margin-bottom: var(--spacing-md);
     opacity: 0.95;
+    color: var(--color-text-secondary);
 }
  
 .hero-subtext {
     font-size: 14px;
     margin-bottom: var(--spacing-lg);
     opacity: 0.9;
+    color: var(--color-text-secondary);
 }
  
 @media (min-width: 768px) {
@@ -346,14 +355,15 @@ a:hover {
 }
  
 .btn-primary {
-    background-color: var(--color-white);
-    color: var(--color-burnt-orange);
-    border-color: var(--color-white);
+    background-color: var(--color-burnt-orange);
+    color: var(--color-white);
+    border-color: var(--color-burnt-orange);
 }
  
 .btn-primary:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--color-burnt-orange-dark);
     text-decoration: none;
+    border-color: var(--color-burnt-orange-dark);
 }
  
 .btn-secondary {
