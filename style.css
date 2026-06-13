@@ -276,7 +276,7 @@ a:hover {
     background: var(--color-white);
     background-image: url('images/hero_BP.jpg');
     background-size: cover;
-    background-position: center bottom;
+    background-position: center 65%;
     background-attachment: fixed;
     color: var(--color-text-primary);
     padding: 4rem var(--spacing-sm);
@@ -724,6 +724,29 @@ a:hover {
     color: var(--color-text-secondary);
     margin-top: var(--spacing-sm);
     margin-bottom: 0;
+}
+
+.form-thank-you {
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: #f0f8f5;
+    border-left: 4px solid var(--color-burnt-orange);
+    border-radius: 4px;
+}
+
+.form-thank-you h2 {
+    color: var(--color-burnt-orange);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.8rem;
+}
+
+.form-thank-you p {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+.form-thank-you .btn {
+    margin-top: var(--spacing-sm);
 }
  
 .contact-grid {
