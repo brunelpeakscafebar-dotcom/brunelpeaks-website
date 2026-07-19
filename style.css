@@ -1297,3 +1297,125 @@ a:hover {
     font-weight: 500;
 }
 
+
+/* ====================================
+   Event Planner Page: Hero override
+   ==================================== */
+ 
+.hero-events {
+    background-image: url('images/Events.jpg');
+}
+ 
+/* ====================================
+   Event Planner Page: Downloads Section
+   ==================================== */
+ 
+.downloads-section {
+    background-color: var(--color-bg-secondary);
+}
+ 
+.downloads-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+ 
+@media (min-width: 768px) {
+    .downloads-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+ 
+.download-card {
+    background-color: var(--color-bg-primary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+ 
+.download-badge {
+    display: inline-block;
+    background-color: var(--color-burnt-orange);
+    color: var(--color-white);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-sm);
+}
+ 
+.download-card h3 {
+    color: var(--color-burnt-orange);
+    margin-bottom: var(--spacing-sm);
+}
+ 
+.download-card p {
+    font-size: 14px;
+    margin-bottom: var(--spacing-md);
+}
+ 
+/* ====================================
+   Event Planner Page: Packages Section
+   ==================================== */
+ 
+.packages-section {
+    background-color: var(--color-bg-primary);
+}
+ 
+.packages-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+ 
+@media (min-width: 768px) {
+    .packages-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+ 
+.package-card {
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+ 
+.package-card h3 {
+    color: var(--color-text-primary);
+    margin: var(--spacing-sm) 0;
+}
+ 
+.package-card p {
+    font-size: 14px;
+}
+ 
+.package-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-sm);
+    color: var(--color-white);
+}
+ 
+.package-tag-amber {
+    background-color: var(--color-burnt-orange);
+}
+ 
+.package-tag-charcoal {
+    background-color: var(--color-dark-gray);
+}
+ 
+.package-price {
+    font-weight: 600;
+    color: var(--color-burnt-orange-dark);
+    margin-top: var(--spacing-sm);
+}
