@@ -24,6 +24,7 @@
             <ul class="navbar-menu">
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#menu">Menu</a></li>
+                <li><a href="#stand-draw">Stand Draw</a></li>
                 <li><a href="#packages">Events</a></li>
                 <li><a href="#contact-form">Contact</a></li>
             </ul>
@@ -37,7 +38,84 @@
             <h1>Weddings & Events</h1>
             <p class="hero-tagline">at Brunel Peaks</p>
             <p class="hero-subtext">A one-of-a-kind destination for your celebration, in the heart of Western Southland</p>
-            <a href="#downloads" class="btn btn-primary">See our event packages</a>
+            <div class="hero-cta-row">
+                <a href="#stand-draw" class="btn btn-primary">Enter the Stand Draw</a>
+                <a href="#downloads" class="btn btn-outline">See our event packages</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stand Draw Entry Section (Southern Wedding Expo) -->
+    <section id="stand-draw" class="section stand-draw-section">
+        <div class="container">
+            <span class="download-badge">Southern Wedding Expo &mdash; 26 July 2026</span>
+            <h2>Enter the Stand Draw</h2>
+            <p>Visiting us at our stand this weekend? Pop in your details below for your chance to win a <strong>$100 dining voucher</strong> to use at Brunel Peaks. The winner will be drawn and notified after the expo.</p>
+
+            <form id="standDrawForm" method="POST" action="https://formspree.io/f/mvznwwny?redirect=https://brunelpeakscafebar.com/thank-you.html">
+                <input type="hidden" name="_subject" value="Stand Draw Entry - Southern Wedding Expo">
+                <input type="hidden" name="entry_type" value="Stand Draw">
+                <input type="hidden" name="page_source" value="Event Planner Page - Stand Draw">
+
+                <div class="form-grid form-grid-two">
+                    <div class="form-group">
+                        <label class="form-label" for="draw-name">Name *</label>
+                        <input type="text" id="draw-name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="draw-email">Email *</label>
+                        <input type="email" id="draw-email" name="email" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="draw-phone">Phone</label>
+                    <input type="tel" id="draw-phone" name="phone" class="form-input">
+                </div>
+
+                <button type="submit" class="form-submit">Enter the draw</button>
+                <p class="form-notice">One entry per person. The winner will be contacted by email or phone &mdash; good luck!</p>
+            </form>
+
+            <div id="standDrawThankYou" class="form-thank-you" style="display: none;">
+                <h2>You're in!</h2>
+                <p>Thanks for entering the Brunel Peaks Stand Draw &mdash; good luck! We'll be in touch if you're our winner.</p>
+                <p>In the meantime, feel free to have a browse of our <a href="#downloads">wedding planning guides</a> below.</p>
+            </div>
+
+            <script>
+                document.getElementById('standDrawForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const form = this;
+                    const formData = new FormData(form);
+                    const submitButton = form.querySelector('.form-submit');
+                    const originalText = submitButton.textContent;
+
+                    submitButton.textContent = 'Entering...';
+                    submitButton.disabled = true;
+
+                    fetch('https://formspree.io/f/mvznwwny', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('standDrawForm').style.display = 'none';
+                        document.getElementById('standDrawThankYou').style.display = 'block';
+                        document.getElementById('standDrawThankYou').scrollIntoView({ behavior: 'smooth' });
+                    })
+                    .catch(error => {
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                        alert('Oops! There was an error sending your entry. Please try again.');
+                        console.error('Error:', error);
+                    });
+                });
+            </script>
         </div>
     </section>
 
@@ -158,6 +236,7 @@
                                 <option value="wedding">Wedding / celebration</option>
                                 <option value="private">Private function</option>
                                 <option value="corporate">Corporate or community event</option>
+                                <option value="stand_draw">Southern Wedding Expo stand draw entry</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
